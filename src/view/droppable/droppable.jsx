@@ -45,12 +45,14 @@ export default class Droppable extends Component<Props> {
   static childContextTypes = {
     [droppableIdKey]: PropTypes.string.isRequired,
     [droppableTypeKey]: PropTypes.string.isRequired,
+    [droppableUserCustomProp]: PropTypes.any,
   };
 
   getChildContext(): Context {
     const value: Context = {
       [droppableIdKey]: this.props.droppableId,
       [droppableTypeKey]: this.props.type,
+      [droppableUserCustomProp]: this.props.userCustomProp,
     };
     return value;
   }
@@ -138,6 +140,7 @@ export default class Droppable extends Component<Props> {
       droppableId,
       isDropDisabled,
       isCombineEnabled,
+      userCustomProp, // TnC
       // mapProps
       ignoreContainerClipping,
       isDraggingOver,
@@ -163,6 +166,7 @@ export default class Droppable extends Component<Props> {
         ignoreContainerClipping={ignoreContainerClipping}
         isDropDisabled={isDropDisabled}
         isCombineEnabled={isCombineEnabled}
+        userCustomProp={userCustomProp}
         getDroppableRef={this.getDroppableRef}
         getPlaceholderRef={this.getPlaceholderRef}
       >
