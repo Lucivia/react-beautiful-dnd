@@ -1080,6 +1080,7 @@ droppable	test/utils/get-simple-state-preset.js	/^      droppable: droppable.des
 droppable	test/utils/get-simple-state-preset.js	/^    const droppable: DroppableDimension =$/;"	C
 droppable	test/utils/get-simple-state-preset.js	/^    droppable: preset.home.descriptor,$/;"	p	class:critical
 droppable	test/utils/preset-action-args.js	/^  droppable: preset.home.descriptor,$/;"	p	class:critical
+droppableCustomPropKey	src/view/context-keys.js	/^export const droppableCustomPropKey: string = prefix('droppable-custom-prop');$/;"	C
 droppableId	src/state/get-dimension-map-with-placeholder.js	/^  const droppableId: ?DroppableId = whatIsDraggedOver(impact);$/;"	C
 droppableId	src/state/get-drag-impact/get-combine-impact.js	/^      droppableId: destination.descriptor.id,$/;"	p	class:merge.combine
 droppableId	src/state/get-drag-impact/in-foreign-list.js	/^      droppableId: destination.descriptor.id,$/;"	p	class:impact.destination

@@ -10,6 +10,7 @@ import {
   droppableIdKey,
   droppableTypeKey,
   styleContextKey,
+  droppableCustomPropKey,
 } from '../context-keys';
 import { warning } from '../../dev-warning';
 import checkOwnProps from './check-own-props';
@@ -45,14 +46,14 @@ export default class Droppable extends Component<Props> {
   static childContextTypes = {
     [droppableIdKey]: PropTypes.string.isRequired,
     [droppableTypeKey]: PropTypes.string.isRequired,
-    [droppableUserCustomProp]: PropTypes.any,
+    [droppableCustomPropKey]: PropTypes.any,
   };
 
   getChildContext(): Context {
     const value: Context = {
       [droppableIdKey]: this.props.droppableId,
       [droppableTypeKey]: this.props.type,
-      [droppableUserCustomProp]: this.props.userCustomProp,
+      [droppableCustomPropKey]: this.props.userCustomProp,
     };
     return value;
   }
